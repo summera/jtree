@@ -9,14 +9,14 @@ define([
 
 		defaults: {
 			title: "Leaf",
-			view: new LeafListView()
+			//view: new LeafListView()
 		},
 		initialize: function(){
-
+			this.view = new LeafListView(this);
 		},
 
 		get_view: function(){
-			return this.attributes.view;
+			return this.view;
 		}
 	});
 	return Leaf;

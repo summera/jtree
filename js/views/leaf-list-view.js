@@ -11,11 +11,11 @@ define([
 		className: "leaf",
 
 		initialize: function(options) {
-			this.item = this.options.leaf;
+			//this.item = this.options.leaf;
 		},
 
 		render: function(){
-			this.$el.html("<h4> Leaf </h4>");
+			this.$el.html("<a> <h4> Leaf </h4> </a>");
 		}
 
 	});

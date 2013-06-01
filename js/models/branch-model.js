@@ -9,10 +9,10 @@ define([
 		defaults: {
 			title: "Branch",
 			leaves: null, //Items and groups in group
-			view: new BranchListView()
+			//view: new BranchListView()
 		},
 		initialize: function(){
-
+			this.view = new BranchListView(this);
 			//Set items as a collection containing provided items
 			if(!this.get("leaves")){ 
 				this.set("leaves", new Backbone.Collection());
@@ -43,7 +43,7 @@ define([
 		},
 
 		get_view: function(){
-			return this.attributes.view;
+			return this.view;
 		}
 
 		/*render: function(){

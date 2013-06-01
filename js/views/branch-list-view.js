@@ -11,11 +11,11 @@ define([
 		className: "branch",
 
 		initialize: function(options) {
-			this.group = this.options.branch;
+			//this.group = this.options.branch;
 		},
 
 		render: function(){
-			this.$el.html("<h3> Branch </h3>");
+			this.$el.html("<a> <h3> Branch </h3> </a>");
 		}
 
 	});
