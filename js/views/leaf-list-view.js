@@ -15,7 +15,7 @@ define([
 		},
 
 		render: function(){
-			this.$el.html("<a> <h4> Leaf </h4> </a>");
+			this.$el.html("<a> <h4>" + this.model.get_title() + "</h4> </a>");
 		}
 
 	});

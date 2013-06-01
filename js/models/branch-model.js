@@ -11,7 +11,7 @@ define([
 			leaves: null, //Leaves and branches in branch
 		},
 		initialize: function(){
-			this.view = new BranchListView(this);
+			this.view = new BranchListView({"model":this});
 			//Set items as a collection containing provided items
 			if(!this.get("leaves")){ 
 				this.set("leaves", new Backbone.Collection());
@@ -43,6 +43,10 @@ define([
 
 		get_view: function(){
 			return this.view;
+		},
+
+		get_title: function(){
+			return this.attributes.title;
 		}
 
 	});

@@ -11,11 +11,14 @@ define([
 			title: "Leaf",
 		},
 		initialize: function(){
-			this.view = new LeafListView(this);
+			this.view = new LeafListView({"model": this});
 		},
 
 		get_view: function(){
 			return this.view;
+		},
+		get_title: function(){
+			return this.attributes.title;
 		}
 	});
 	return Leaf;
