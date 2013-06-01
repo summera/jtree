@@ -11,6 +11,7 @@ define([
 
 		initialize: function(options) {
 			this.tree = this.options.tree;
+			this.breadCrumbs = [];
 		},
 
 		render: function(){

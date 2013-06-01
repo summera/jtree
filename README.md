@@ -1,2 +1,2 @@
-jTree
+jTree.JS
 ========
