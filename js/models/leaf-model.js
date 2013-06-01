@@ -9,7 +9,6 @@ define([
 
 		defaults: {
 			title: "Leaf",
-			//view: new LeafListView()
 		},
 		initialize: function(){
 			this.view = new LeafListView(this);

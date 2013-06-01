@@ -8,8 +8,7 @@ define([
 		
 		defaults: {
 			title: "Branch",
-			leaves: null, //Items and groups in group
-			//view: new BranchListView()
+			leaves: null, //Leaves and branches in branch
 		},
 		initialize: function(){
 			this.view = new BranchListView(this);
@@ -46,9 +45,6 @@ define([
 			return this.view;
 		}
 
-		/*render: function(){
-
-		}*/
 	});
 
 	return Branch;

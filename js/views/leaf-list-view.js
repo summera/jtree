@@ -11,7 +11,7 @@ define([
 		className: "leaf",
 
 		initialize: function(options) {
-			//this.item = this.options.leaf;
+			
 		},
 
 		render: function(){
