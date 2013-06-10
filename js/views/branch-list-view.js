@@ -10,8 +10,23 @@ define([
 
 		className: "branch",
 
+		events: {
+			"click a": "renderToTree"
+		},
+
 		initialize: function(options) {
 
+		},
+
+		renderToTree: function(){
+			if(this.root){
+				this.root.setTree(this.model);
+				//this.root.pushBreadCrumb(this.model);
+			}
+		},
+
+		setRoot: function(root){
+			this.root = root;
 		},
 
 		render: function(){

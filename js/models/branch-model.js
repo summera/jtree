@@ -10,6 +10,7 @@ define([
 			title: "Branch",
 			leaves: null, //Leaves and branches in branch
 		},
+		
 		initialize: function(){
 			this.view = new BranchListView({"model":this});
 			//Set items as a collection containing provided items
@@ -37,7 +38,7 @@ define([
 			else{this.attributes.leaves.reset();}
 		},
 
-		get_leaves: function(){
+		get_items: function(){
 			return this.attributes.leaves;
 		},
 
@@ -47,6 +48,15 @@ define([
 
 		get_title: function(){
 			return this.attributes.title;
+		},
+
+		focusView: function(){
+			focusArray = [];
+			this.get_items().each(function(leaf){
+				var view = leaf.get_view();
+				focusArray.push(view);
+			});
+			return focusArray
 		}
 
 	});
